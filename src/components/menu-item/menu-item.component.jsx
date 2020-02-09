@@ -1,5 +1,5 @@
 import React from 'react';
-//import { withRouter } from 'react-router-dom';
+import { withRouter } from 'react-router-dom';
 import './menu-item.styles.scss';
 
 const MenuItem = ({ title, imageUrl, size, history, linkUrl, match}) => (
@@ -18,5 +18,5 @@ const MenuItem = ({ title, imageUrl, size, history, linkUrl, match}) => (
     </div>    
 );
 
-//export default withRouter(MenuItem);
-export default MenuItem;
+//After wrapping it we have access to history, linkUrl, and match
+export default withRouter(MenuItem);
